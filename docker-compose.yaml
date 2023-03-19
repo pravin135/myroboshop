@@ -1,6 +1,6 @@
 version: "3.9"
 networks:
-  driver: bridge
+ driver: bridge
 services:
  web:
   image: web:v1
