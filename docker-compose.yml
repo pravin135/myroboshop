@@ -3,10 +3,10 @@ networks:
   driver: bridge
 services:
  web:
-   image: web:v1
-   conatainer_name: web
-   depends_on:
-   - catalogue
+  image: web:v1
+  conatainer_name: web
+  depends_on:
+  - catalogue
  mongodb:
   image: mongodb:v1
   container_name: mongodb
@@ -14,4 +14,12 @@ services:
   image: catalogue:v1
   conatainer_name: catalogue
   depends_on:
-  - mongodb 
+  - mongodb
+ redis:
+  image: redis
+ user:
+  image: user:v1
+  conatainer_name: user
+  depends_on: 
+  - mongodb
+  - redis
