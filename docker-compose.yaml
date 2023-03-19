@@ -5,7 +5,7 @@ networks:
 services:
  web:
   image: web:v1
-  conatainer_name: web
+  container_name: web
   ports:
   - "80:80"
   depends_on:
@@ -16,14 +16,14 @@ services:
   container_name: mongodb
  catalogue:
   image: catalogue:v1
-  conatainer_name: catalogue
+  container_name: catalogue
   depends_on:
   - mongodb
  redis:
   image: redis
  user:
   image: user:v1
-  conatainer_name: user
+  container_name: user
   depends_on: 
   - mongodb
   - redis
