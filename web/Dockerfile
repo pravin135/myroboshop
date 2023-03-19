@@ -6,3 +6,5 @@ ADD static /usr/share/nginx/html/
 ENV CATALOGUE_HOST=catalogue \
     USER_HOST=user \
     CART_HOST=cart \
+    SHIPPING_HOST=shipping \
+    PAYMENT_HOST=payment \
